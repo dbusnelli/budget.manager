@@ -5,7 +5,7 @@ const TransactionSchema = new Schema({
     concepto: {type: String, required: true},
     monto: {type: Number, required: true},
     fecha: {type: String, required: true},
-    tipo: ["ingreso", "egreso"]
+    tipo: {type: String, required: true}
 });
 
-module.exports = mongoose.model('Task', TransactionSchema);
+module.exports = mongoose.model('Transaction', TransactionSchema);
